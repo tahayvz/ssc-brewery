@@ -1,7 +1,6 @@
 package guru.sfg.brewery.domain.security;
 
 import lombok.*;
-
 import javax.persistence.*;
 import java.util.Set;
 
@@ -17,8 +16,8 @@ public class Authority {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    private String role;
+    private String permission;
 
     @ManyToMany(mappedBy = "authorities")
-    private Set<User> users;
+    private Set<Role> roles;
 }
